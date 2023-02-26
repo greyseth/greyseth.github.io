@@ -10,6 +10,16 @@ document.addEventListener("scroll", (e) => {
     showHeader = false;
   }
 
+  scrollAnims.forEach((s, i) => {
+    if (this.scrollY >= s.pos) {
+      const el = document.getElementById(s.name);
+      window.requestAnimationFrame(() => {
+        el.classList.add(s.change);
+      });
+      scrollAnims.splice(i, 1);
+    }
+  });
+
   updateHeader();
   firstScroll = false;
 });
@@ -42,13 +52,13 @@ window.addEventListener("keydown", (e) => {
 });
 
 const scrollAnims = [];
-setInterval(() => {
-  scrollAnims.forEach((s) => {
-    if (this.scrollY >= s.pos) {
-      const el = document.getElementById(s.name);
-      window.requestAnimationFrame(() => {
-        el.classList.add(s.change);
-      });
-    }
-  });
-}, 500);
+// setInterval(() => {
+//   scrollAnims.forEach((s) => {
+//     if (this.scrollY >= s.pos) {
+//       const el = document.getElementById(s.name);
+//       window.requestAnimationFrame(() => {
+//         el.classList.add(s.change);
+//       });
+//     }
+//   });
+// }, 500);

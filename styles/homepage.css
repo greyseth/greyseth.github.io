@@ -112,6 +112,7 @@
 .likes-dislikes {
   width: 100vw;
   height: 500px;
+  margin-bottom: 50px;
 
   display: flex;
   justify-content: space-evenly;
@@ -211,4 +212,120 @@
     transform: translateX(0px) scale(100%);
     color: white;
   }
+}
+
+.more {
+  width: 100vw;
+  height: 550px;
+  margin-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+
+  transform: translateX(500px);
+  opacity: 0;
+}
+
+.more-in {
+  animation: more-in 1s forwards normal ease-out;
+}
+@keyframes more-in {
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.more h2 {
+  width: 200px;
+  height: 70px;
+  border: #bc6ff1 2px solid;
+  text-align: center;
+  line-height: 70px;
+  margin-bottom: 20px;
+}
+
+.more-decor {
+  width: 40vw;
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+
+.more-decor div {
+  background-color: white;
+  width: 7px;
+  height: 150px;
+  transform: rotate(45deg);
+}
+
+.more-decor .circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: -3px;
+  background-color: white;
+}
+
+.more-decor .circle-move {
+  animation: circle-loop 2s infinite ease-in-out alternate;
+}
+
+@keyframes circle-loop {
+  0% {
+    top: -2px;
+  }
+
+  100% {
+    top: 148px;
+  }
+}
+
+.more-buttons {
+  width: 100vw;
+  height: 250px;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Russo One", sans-serif;
+}
+
+.more-buttons div {
+  width: 250px;
+  height: 70px;
+  /* height will be 250px */
+  border: #bc6ff1 1px solid;
+  background-color: #400d51;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.more-buttons div:hover {
+  height: 250px;
+  cursor: pointer;
+}
+
+.more-buttons div:hover > img {
+  height: 150px;
+  opacity: 1;
+}
+
+.more-buttons div p {
+  line-height: 70px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.more-buttons div img {
+  width: 150px;
+  height: 0px;
+  /* height will be 150px */
+  opacity: 0;
+  transition: 1s;
 }

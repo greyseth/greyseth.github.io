@@ -4,6 +4,7 @@ const toPush = [
   { name: "dislikes", pos: 600, change: "likes-dislikes-in" },
   { name: "top-bar", pos: 750, change: "decor-in" },
   { name: "bottom-bar", pos: 750, change: "decor-in" },
+  { name: "more", pos: 1300, change: "more-in" },
 ];
 toPush.forEach((p) => scrollAnims.push(p));
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Greyseth's profile page." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,16 +24,18 @@
         >Scroll to top</a
       >
     </header>
+
     <main>
-      <div class="hello-there" id="site-top">
+      <section class="hello-there" id="site-top">
         <div>
           <h1>HELLO THERE</h1>
         </div>
         <div>
           <img src="./img/GreyHello.png" width="400px" height="400px" />
         </div>
-      </div>
-      <div class="site-desc">
+      </section>
+
+      <section class="site-desc">
         <p>
           This is a little website which I created to practice my HTML and CSS.
           I don't usually make 'proper' about mes like this, but I guess there's
@@ -42,8 +45,9 @@
           This is the second version of the site. I remade everything to look
           more 'modern'.
         </p>
-      </div>
-      <div class="bio" id="bio-main">
+      </section>
+
+      <section class="bio" id="bio-main">
         <div>
           <img src="./img/GreyPoint.png" width="400px" height="400px" />
         </div>
@@ -67,8 +71,9 @@
             such.
           </div>
         </div>
-      </div>
-      <div class="likes-dislikes" id="likes-dislikes">
+      </section>
+
+      <section class="likes-dislikes" id="likes-dislikes">
         <ul id="likes">
           <h2 style="color: green">I LIKE...</h2>
           <li>Programming</li>
@@ -90,7 +95,29 @@
           <li>Myself</li>
           <li>Cockroaches</li>
         </ul>
-      </div>
+      </section>
+
+      <section class="more" id="more">
+        <h2>MORE STUFF</h2>
+        <div class="more-decor">
+          <div style="transform: rotate(45deg)">
+            <div class="circle circle-move"></div>
+          </div>
+          <div style="transform: rotate(-45deg)">
+            <div class="circle circle-move"></div>
+          </div>
+        </div>
+        <div class="more-buttons">
+          <div onclick="window.location = './jobs.html'">
+            <p>WHAT I DO</p>
+            <img src="./img/icons/code.png" />
+          </div>
+          <div>
+            <p>MY INTERESTS</p>
+            <img src="./img/icons/controller.png" />
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="./scripts/script.js"></script>

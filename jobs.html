@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Greyseth's profile page." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/jobs.css" />
+    <title>Grey's Jobs</title>
+  </head>
+  <body>
+    <header>
+      <img src="./img/GreyLogo.png" />
+      <h2>About Me Page</h2>
+      <a onclick="document.querySelector('.hello-there').scrollIntoView()"
+        >Scroll to top</a
+      >
+    </header>
+
+    <main>
+      <section class="navigator" id="site-top">
+        <div>
+          <h1>WHAT I DO</h1>
+        </div>
+        <div class="nav-grid">
+          <button>PROGRAMMING</button>
+          <button>GAMEDEV</button>
+          <button>3D MODELLING</button>
+          <button onclick="window.location = './index.html'">RETURN</button>
+        </div>
+      </section>
+
+      <section class="lang">
+        <ul>
+          <li><img src="./img/lang/csharp.png" /></li>
+          <li><img src="./img/lang/js.png" /></li>
+          <li><img src="./img/lang/html.png" /></li>
+          <li><img src="./img/lang/cplus.png" /></li>
+        </ul>
+        <div>
+          <p>
+            I've been learning about programming for about more or less 4 years
+            now.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/jobs.js"></script>
+  </body>
+</html>
