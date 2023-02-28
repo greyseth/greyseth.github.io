@@ -75,6 +75,10 @@
   border: #bc6ff1 solid 2px;
 }
 
+.lang div:last-child {
+  padding: 15px;
+}
+
 .lang-desc {
   display: grid;
   grid-template-columns: 30% 1fr 30%;
@@ -172,7 +176,133 @@
 }
 
 .link-desc {
-  width: 100vw;
+  width: 500px;
   height: 150px;
-  padding: 70px;
+  margin: 0px auto;
+  border: #bc6ff1 2px solid;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  /* opacity: 0;
+  transform: scaleX(0%); */
+  margin-bottom: 50px;
+}
+.link-desc b {
+  color: red;
+  font-weight: bold;
+}
+
+.link-in {
+  animation: link-in 1s forwards normal ease-out 1;
+  /* opacity: 1;
+  transition: scaleX(100%);
+  background-color: blue; */
+}
+
+@keyframes link-in {
+  0% {
+    opacity: 0;
+    transform: scaleX(0%);
+  }
+
+  100% {
+    opacity: 1;
+    transition: scaleX(100%);
+  }
+}
+
+.offer {
+  width: 700px;
+  height: 250px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  border: #bc6ff1 2px solid;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.offer-out {
+  transform: scaleY(0%);
+  opacity: 0;
+}
+.offer-in {
+  animation: offer-in 1s forwards ease-out 1;
+}
+
+@keyframes offer-in {
+  100% {
+    transform: scaleY(100%);
+    opacity: 1;
+  }
+}
+
+.offer-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 250px;
+  margin-bottom: 50px;
+}
+
+.offer-img img {
+  width: 700px;
+  height: auto;
+}
+
+.offer-img p {
+  color: yellow;
+  font-size: 15px;
+}
+
+.blender-block {
+  width: 950px;
+  height: 400px;
+  margin: 0px auto;
+  display: block;
+}
+
+.blender-block img {
+  width: 310px;
+  height: 170px;
+}
+
+/* Lefthand side */
+.blender-block img:nth-child(1),
+.blender-block img:nth-child(4) {
+  transform: translateX(-250px);
+  opacity: 0;
+}
+
+/* Middle */
+.blender-block img:nth-child(2),
+.blender-block img:nth-child(5) {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+/* Righthand side */
+.blender-block img:nth-child(3),
+.blender-block img:nth-child(6) {
+  transform: translateX(250px);
+  opacity: 0;
+}
+
+.blender-in {
+  animation: blender-in 1s ease-out forwards 1;
+}
+
+@keyframes blender-in {
+  100% {
+    transform: translateX(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

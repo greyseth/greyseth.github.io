@@ -32,8 +32,16 @@
         </div>
         <div class="nav-grid">
           <button>PROGRAMMING</button>
-          <button>GAMEDEV</button>
-          <button>3D MODELLING</button>
+          <button
+            onclick="document.getElementById('itch-link').scrollIntoView()"
+          >
+            GAMEDEV
+          </button>
+          <button
+            onclick="document.getElementById('blender-sec').scrollIntoView()"
+          >
+            3D MODELLING
+          </button>
           <button onclick="window.location = './index.html'">RETURN</button>
         </div>
       </section>
@@ -48,7 +56,7 @@
         <div>
           <p>
             I've been learning about programming for about more or less 4 years
-            now.
+            now, and have used multiple different languages since then.
           </p>
         </div>
       </section>
@@ -72,14 +80,60 @@
       </section>
       <section class="lang-decor">
         <div></div>
-        <div><img src="./img/dev/itch.png" /></div>
+        <div>
+          <img
+            src="./img/dev/itch.png"
+            onclick="window.location = 'https://greyseth.itch.io'"
+          />
+        </div>
         <div></div>
       </section>
-      <section class="link-desc">
+      <section class="link-desc" id="itch-link">
         <p>
           The above image is a link that leads to my Itch.io page. Be warned,
-          however, that you probably <b>DON'T</b> want to see it...
+          however, that you <b>DON'T</b> want to see it...
         </p>
+      </section>
+
+      <section style="margin-bottom: 150px">
+        <div class="offer offer-out" id="offer">
+          <p>
+            So far, I've done one freelance job. I made a short prototype which
+            my client requested to keep classified. So... If, by any chance, you
+            need someone to make a game for you...<br />
+            BETTER CALL GREY
+          </p>
+        </div>
+        <div class="offer-img">
+          <img src="./img/BetterCallGrey.png" />
+          <p>
+            Or not, because I'm not sure I have the qualifications... But hey,
+            I'm willing to accept low prices! (I really need money...)
+          </p>
+        </div>
+      </section>
+
+      <section id="blender-sec">
+        <div class="offer" style="font-size: 20px">
+          <p>
+            Now, if you've taken a look at those games, you're probably thinking
+            "wow, these look terrible." I am a programmer, and I don't really
+            have much talents when it comes to anything visual. I think that
+            that's the problem with all my games. They play fine, but they don't
+            LOOK good, which makes them super unappealing. If I were to make a
+            game that plays AND looks great, I'd need some help from an artist.
+            But nonetheless, I still try my best and do what I know about 3D
+            models.
+          </p>
+        </div>
+        <div class="blender-block">
+          <img src="./img/model/one.PNG" id="blender" />
+          <img src="./img/model/two.PNG" id="blender-2" />
+          <img src="./img/model/three.PNG" id="blender-3" />
+          <img src="./img/model/five.png" id="blender-4" />
+          <img src="./img/model/six.png" id="blender-5" />
+          <img src="./img/model/seven.png" id="blender-6" />
+        </div>
       </section>
     </main>
 
