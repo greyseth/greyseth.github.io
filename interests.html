@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Greyseth's profile page." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/interests.css" />
+    <title>Grey's Interests</title>
+  </head>
+  <body>
+    <header>
+      <img src="./img/GreyLogo.png" />
+      <h2>About Me Page</h2>
+      <a onclick="document.querySelector('.navigator').scrollIntoView()"
+        >Scroll to top</a
+      >
+    </header>
+
+    <main>
+      <section class="navigator" id="site-top">
+        <div>
+          <h1>MY INTERESTS</h1>
+        </div>
+        <div class="nav-grid">
+          <button>GAMES</button>
+          <button
+            onclick="document.getElementById('itch-link').scrollIntoView()"
+          >
+            MOVIES
+          </button>
+          <button
+            onclick="document.getElementById('blender-sec').scrollIntoView()"
+          >
+            MUSIC
+          </button>
+          <button onclick="window.location = './index.html'">RETURN</button>
+        </div>
+      </section>
+
+      <section class="lang" id="lang-section">
+        <ul>
+          <li><img src="./img/controllers/NESController.png" /></li>
+          <li><img src="./img/controllers/GenesisController.png" /></li>
+          <li><img src="./img/controllers/SNESController.png" /></li>
+          <li><img src="./img/controllers/PS1Controller.png" /></li>
+          <li><img src="./img/controllers/N64Controller.png" /></li>
+          <li><img src="./img/controllers/DreamcastController.png" /></li>
+        </ul>
+        <div>
+          <p>
+            I'm a big retro game fan. From the third generation to the fifth,
+            mostly. I never really liked second gen games, to be completely
+            honest. And I've never had a sixth or seventh gen console.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="games">
+          <img
+            src="./img/gaming/d2.png"
+            id="d2"
+            onclick="enableBG('d2', 'd2BG.jpg')"
+          />
+          <img
+            src="./img/gaming/re4.png"
+            id="re4"
+            onclick="enableBG('re4', 're4BG.jpg')"
+          />
+          <img
+            src="./img/gaming/OoT_English_Logo.webp"
+            id="oot"
+            onclick="enableBG('oot', 'OOTBG.webp')"
+          />
+          <img
+            src="./img/gaming/p3.png"
+            id="p3"
+            onclick="enableBG('p3', 'p3BG.jpg')"
+          />
+          <img
+            src="./img/gaming/sc4.png"
+            id="sc4"
+            onclick="enableBG('sc4', 'sc4.jpg')"
+          />
+          <img
+            src="./img/gaming/hl.png"
+            id="hl"
+            onclick="enableBG('hl', 'hlBG.jpg')"
+          />
+        </div>
+        <div class="games-extra">
+          <div><img src="./img/gaming/snes.png" /></div>
+          <div>
+            My favourite console generation has got to be the fourth. Why? I
+            don't know, tbh. Everything just has so much charm in this era.
+            Like, every new invention feels so magical to experience.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/interests.js"></script>
+  </body>
+</html>
