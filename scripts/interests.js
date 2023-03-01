@@ -12,6 +12,7 @@ const bgItems = [
   "p3",
   "sc4",
   "hl",
+  "mk",
   "t2",
   "btff",
   "bb",
@@ -19,6 +20,13 @@ const bgItems = [
   "bt",
   "ram",
   "star",
+  "metallica",
+  "megadeth",
+  "a7x",
+  "linkinpark",
+  "slipknot",
+  "korn",
+  "ffdp",
 ];
 function enableBG(logo, bg, target = "games") {
   let path = "";

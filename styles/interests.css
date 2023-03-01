@@ -80,7 +80,7 @@
 }
 
 .games-title {
-  width: 800px;
+  width: 950px;
   height: 50px;
   background-color: #bc6ff1;
   margin: 0px auto;
@@ -95,14 +95,14 @@
 .games {
   /* background-color: blue; */
   aspect-ratio: 16 / 9;
-  width: 800px;
+  width: 950px;
   margin: 0px auto;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
   border: #bc6ff1 2px solid;
   padding: 15px;
-  background-image: url("../img/gaming/Atari_2600_wallpaper.png");
+  background-image: url("../img/DottedBackground.jpg");
   background-size: cover;
   overflow: hidden;
   margin-bottom: 50px;
