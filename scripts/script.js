@@ -70,7 +70,7 @@ const notSecret = `
   <button onclick="window.location = './forbidden.html'">
     Get secret
   </button>
-  <button onclick="document.querySelector('.secret-container').remove();">
+  <button onclick="document.querySelector('.secret-container').remove(); isShown = false;">
     Close
   </button>
 </div>
@@ -82,6 +82,7 @@ let secretInput = {
   left: 0,
   right: 0,
 };
+let isShown = false;
 
 document.addEventListener("keydown", (e) => {
   let isArrow = false;
@@ -111,9 +112,11 @@ document.addEventListener("keydown", (e) => {
       if (secretInput[dir] < 2) incomplete = true;
     }
 
-    if (!incomplete)
+    if (!incomplete && !isShown)
       document
         .querySelector("main")
         .insertAdjacentHTML("afterbegin", notSecret);
+
+    isShown = true;
   }
 });
