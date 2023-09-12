@@ -329,3 +329,68 @@
   opacity: 0;
   transition: 1s;
 }
+
+.message-container {
+  width: 100%;
+}
+
+.message {
+  margin: 0px auto;
+  margin-bottom: 5%;
+  padding: 15px;
+
+  aspect-ratio: 16/8;
+  width: 50%;
+  min-width: 450px;
+  height: auto;
+
+  border: 5px #400d51 solid;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10%;
+}
+
+.message h2 {
+  color: white;
+}
+
+.message textarea {
+  aspect-ratio: 16/6;
+  width: 80%;
+  height: auto;
+  font-size: 1rem;
+}
+
+.message button {
+  aspect-ratio: 16/5;
+  width: 25%;
+  height: auto;
+  font-size: 1.25rem;
+
+  background-color: #bc6ff1;
+  border: 2px solid white;
+  color: white;
+
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.message button:hover {
+  cursor: pointer;
+  transform: scale(115%);
+  color: #400d51;
+  background-color: white;
+  border: 2px solid #bc6ff1;
+}
+
+.alert-white {
+  color: white;
+  font-size: 0.85rem;
+}
+
+.alert-red {
+  color: #ff0000;
+  font-size: 0.85rem;
+}

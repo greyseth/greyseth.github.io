@@ -1,3 +1,5 @@
+// const { WebhookClient } = require("discord.js");
+
 const toPush = [
   { name: "bio-main", pos: 300, change: "bio-in" },
   { name: "likes", pos: 600, change: "likes-dislikes-in" },
@@ -72,3 +74,58 @@ lists.forEach((li) => {
     }
   });
 });
+
+function sendMsg() {
+  const messageContent = document.getElementById("msg-content").value;
+  if (messageContent !== "") {
+    // const hook = new WebhookClient({
+    //   url: "https://discord.com/api/webhooks/1151159364808347848/91lf4f47BSAgqAFvGwuCHrRk4KepfaK4HpEicbghCPo61Nza0S2zMyMMu2fFfll_PYSf",
+    // });
+    // hook.send({
+    //   content: `Someone actually saw your site and sent a message:\n${messageContent}`,
+    // });
+    var xhr = new XMLHttpRequest();
+    xhr.onerror = (e) => {
+      msgError("An error has occurred");
+      return;
+    };
+    xhr.open(
+      "POST",
+      "https://discord.com/api/webhooks/1151159364808347848/91lf4f47BSAgqAFvGwuCHrRk4KepfaK4HpEicbghCPo61Nza0S2zMyMMu2fFfll_PYSf",
+      true
+    );
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(
+      JSON.stringify({
+        content: `Someone actually saw your website and sent a message;\n${messageContent}`,
+        username: "Notifier",
+      })
+    );
+
+    msgAlert("Message has been sent");
+  } else {
+    msgError("You must enter a message above");
+  }
+}
+
+function msgError(msg) {
+  if (document.querySelector(".alert-red") !== null)
+    document.querySelector(".alert-red").remove();
+  if (document.querySelector(".alert-white") !== null)
+    document.querySelector(".alert-white").remove();
+
+  document
+    .querySelector(".message")
+    .insertAdjacentHTML("beforeend", '<p class="alert-red">' + msg + "</p>");
+}
+
+function msgAlert(msg) {
+  if (document.querySelector(".alert-red") !== null)
+    document.querySelector(".alert-red").remove();
+  if (document.querySelector(".alert-white") !== null)
+    document.querySelector(".alert-white").remove();
+
+  document
+    .querySelector(".message")
+    .insertAdjacentHTML("beforeend", '<p class="alert-white">' + msg + "</p>");
+}

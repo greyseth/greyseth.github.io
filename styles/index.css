@@ -55,3 +55,61 @@ header a {
 header a:hover {
   cursor: pointer;
 }
+
+.secret-container {
+  width: 100%;
+  height: 100vh;
+
+  position: fixed;
+  background-color: rgba(70, 70, 70, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999999;
+}
+
+.secret-msg {
+  aspect-ratio: 16/9;
+  width: 50%;
+  min-width: 450px;
+  height: auto;
+
+  background-color: black;
+  border: 10px solid #400d51;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+.secret-msg p {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.secret-msg button {
+  aspect-ratio: 16/5;
+  width: 25%;
+  height: auto;
+  font-size: 1.25rem;
+
+  background-color: #bc6ff1;
+  border: 2px solid white;
+  color: white;
+
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.secret-msg button:hover {
+  cursor: pointer;
+  transform: scale(115%);
+  color: black;
+  background-color: white;
+  border: 2px solid #bc6ff1;
+}

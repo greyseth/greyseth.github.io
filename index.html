@@ -1,3 +1,6 @@
+<!-- NOTASECRET -->
+<!-- up up down down left right left right -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,9 +40,9 @@
 
       <section class="site-desc">
         <p>
-          This is a little website which I created to practice my HTML and CSS.
-          I don't usually make 'proper' about mes like this, but I guess there's
-          a first time for everything.
+          This is a little website which I created to practice my JS and CSS. I
+          don't usually make 'proper' about mes like this, but I guess there's a
+          first time for everything.
         </p>
         <p>
           This is the second version of the site. I remade everything to look
@@ -116,6 +119,17 @@
             <p>MY INTERESTS</p>
             <img src="./img/icons/controller.png" />
           </div>
+        </div>
+      </section>
+
+      <section class="message-container">
+        <div class="message">
+          <h2>SEND ANONYMOUS MESSAGE</h2>
+          <textarea
+            id="msg-content"
+            placeholder="Want to critique me, insult me, and/or send me a death threat? You can do it here, and I won't know who sent it!"
+          ></textarea>
+          <button onclick="sendMsg()">Send</button>
         </div>
       </section>
     </main>
