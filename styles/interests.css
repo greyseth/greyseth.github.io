@@ -224,6 +224,7 @@
   border: 3px solid #bc6ff1;
   margin: 0px auto;
   position: relative;
+  overflow: hidden;
 }
 
 .ryu {
