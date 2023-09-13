@@ -208,3 +208,101 @@
 .games-extra * {
   animation: inherit;
 }
+
+.sf-container {
+  width: 100%;
+  padding: 2%;
+  margin-bottom: 50px;
+}
+
+.sf {
+  aspect-ratio: 16/9;
+  width: 60%;
+  height: auto;
+  background-image: url("../img/sf/sfbg.jpg");
+  background-size: contain;
+  border: 3px solid #bc6ff1;
+  margin: 0px auto;
+  position: relative;
+}
+
+.ryu {
+  aspect-ratio: 9/16;
+  width: 15%;
+  height: auto;
+  /* background-color: blue; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+}
+.ryu-idle {
+  animation: ryu-idle infinite 0.35s normal;
+}
+.ryu-move {
+  animation: ryu-move infinite 0.5s normal;
+}
+.ryu-punch {
+  animation: ryu-punch 1 0.85s normal forwards;
+}
+
+@keyframes ryu-idle {
+  0% {
+    background-image: url("../img/sf/ryu/idle1.png");
+  }
+  100% {
+    background-image: url("../img/sf/ryu/idle2.png");
+  }
+}
+
+@keyframes ryu-move {
+  0% {
+    background-image: url("../img/sf/ryu/move1.png");
+  }
+  25% {
+    background-image: url("../img/sf/ryu/move2.png");
+  }
+  50% {
+    background-image: url("../img/sf/ryu/move3.png");
+  }
+  75% {
+    background-image: url("../img/sf/ryu/move4.png");
+  }
+  100% {
+    background-image: url("../img/sf/ryu/move1.png");
+  }
+}
+
+@keyframes ryu-punch {
+  0% {
+    background-image: url("../img/sf/ryu/punch1.png");
+  }
+  15% {
+    background-image: url("../img/sf/ryu/punch2.png");
+  }
+  85% {
+    aspect-ratio: 12/16;
+    background-position: center;
+    width: 20%;
+    background-image: url("../img/sf/ryu/punch3.png");
+  }
+  100% {
+    aspect-ratio: 9/16;
+    width: 15%;
+    background-image: url("../img/sf/ryu/punch2.png");
+  }
+}
+
+.ken {
+  aspect-ratio: 9/16;
+  width: 10%;
+  height: auto;
+  background-color: red;
+
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+}
