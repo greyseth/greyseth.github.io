@@ -1,3 +1,20 @@
+const imgPath = "../img/";
+const preloadImages = [
+  "ryu/idle1.png",
+  "ryu/idle2.png",
+  "ryu/move1.png",
+  "ryu/move2.png",
+  "ryu/move3.png",
+  "ryu/move4.png",
+  "ken/idle1.png",
+  "ken/idle2.png",
+  "ken/move1.png",
+  "ken/move2.png",
+  "ken/move3.png",
+];
+preloadImages.forEach(async (img) => await preloadImage(img));
+console.log("images loaded");
+
 const toPush = [
   { name: "gamesDesc", pos: 700, change: "games-extra-in" },
   { name: "gamesDesc2", pos: 710, change: "games-extra-in" },
@@ -44,7 +61,7 @@ function enableBG(logo, bg, target = "games") {
 
   document.getElementById(
     target
-  ).style.backgroundImage = `url("../img/${path}/${bg}")`;
+  ).style.backgroundImage = `url("./img/${path}/${bg}")`;
 
   bgItems.forEach((b) => {
     if (b === logo) {
@@ -59,10 +76,9 @@ function reverse(target) {
   document.getElementById(target).classList.toggle("reversed");
 }
 
-let timePassed = 0;
-
 let playerPos = 15;
 let playerSpeed = 0.5;
+const animStates = {};
 let dirInput = {
   left: false,
   right: false,
@@ -162,24 +178,24 @@ setInterval(() => {
 
 function p1Update() {
   if (dirInput.down) {
-    ryu.classList.remove("ryu-move");
-    ryu.classList.remove("ryu-idle");
-    ryu.classList.add("ryu-crouch");
+    ryu.classList.remove("move");
+    ryu.classList.remove("idle");
+    ryu.classList.add("crouch");
 
     return;
   } else {
-    ryu.classList.remove("ryu-crouch");
+    ryu.classList.remove("crouch");
   }
 
   if (dirInput.right) playerPos += playerSpeed;
   if (dirInput.left) playerPos -= playerSpeed;
 
   if (dirInput.left || dirInput.right) {
-    ryu.classList.remove("ryu-idle");
-    ryu.classList.add("ryu-move");
+    ryu.classList.remove("idle");
+    ryu.classList.add("move");
   } else {
-    ryu.classList.remove("ryu-move");
-    ryu.classList.add("ryu-idle");
+    ryu.classList.remove("move");
+    ryu.classList.add("idle");
   }
 
   ryu.style.left = `${playerPos}%`;
@@ -187,24 +203,24 @@ function p1Update() {
 
 function p2Update() {
   if (enemInput.down) {
-    ken.classList.remove("ken-move");
-    ken.classList.remove("ken-idle");
-    ken.classList.add("ken-crouch");
+    ken.classList.remove("move");
+    ken.classList.remove("idle");
+    ken.classList.add("crouch");
 
     return;
   } else {
-    ken.classList.remove("ken-crouch");
+    ken.classList.remove("crouch");
   }
 
   if (enemInput.right) enemPos -= playerSpeed;
   if (enemInput.left) enemPos += playerSpeed;
 
   if (enemInput.left || enemInput.right) {
-    ken.classList.remove("ken-idle");
-    ken.classList.add("ken-move");
+    ken.classList.remove("idle");
+    ken.classList.add("move");
   } else {
-    ken.classList.remove("ken-move");
-    ken.classList.add("ken-idle");
+    ken.classList.remove("move");
+    ken.classList.add("idle");
   }
 
   ken.style.right = `${enemPos}%`;

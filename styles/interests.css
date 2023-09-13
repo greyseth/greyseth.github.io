@@ -240,16 +240,16 @@
   bottom: 10%;
   left: 15%;
 }
-.ryu-idle {
+.ryu.idle {
   animation: ryu-idle infinite 0.35s normal;
 }
-.ryu-move {
+.ryu.move {
   animation: ryu-move infinite 0.5s normal;
 }
 /* .ryu-punch {
   animation: ryu-punch 1 0.85s normal forwards;
 } */
-.ryu-crouch {
+.ryu.crouch {
   background-image: url("../img/sf/ryu/crouch.png");
 }
 
@@ -317,13 +317,13 @@
   bottom: 10%;
   right: 15%;
 }
-.ken-idle {
+.ken.idle {
   animation: ken-idle infinite 0.35s normal;
 }
-.ken-move {
+.ken.move {
   animation: ken-move infinite 0.5s normal;
 }
-.ken-crouch {
+.ken.crouch {
   background-image: url("../img/sf/ken/crouch.png");
 }
 
