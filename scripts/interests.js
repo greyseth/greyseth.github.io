@@ -12,7 +12,7 @@ const preloadImages = [
   "ken/move2.png",
   "ken/move3.png",
 ];
-preloadImages.forEach(async (img) => await preloadImage(img));
+preloadImages.forEach(async (img) => await preloadImage(`${imgPath}/${img}`));
 console.log("images loaded");
 
 const toPush = [
