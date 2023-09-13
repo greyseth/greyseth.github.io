@@ -245,8 +245,11 @@
 .ryu-move {
   animation: ryu-move infinite 0.5s normal;
 }
-.ryu-punch {
+/* .ryu-punch {
   animation: ryu-punch 1 0.85s normal forwards;
+} */
+.ryu-crouch {
+  background-image: url("../img/sf/ryu/crouch.png");
 }
 
 @keyframes ryu-idle {
@@ -276,33 +279,76 @@
   }
 }
 
-@keyframes ryu-punch {
+/* @keyframes ryu-punch {
   0% {
     background-image: url("../img/sf/ryu/punch1.png");
   }
   15% {
     background-image: url("../img/sf/ryu/punch2.png");
   }
-  85% {
+  35% {
     aspect-ratio: 12/16;
     background-position: center;
     width: 20%;
     background-image: url("../img/sf/ryu/punch3.png");
   }
-  100% {
+  85% {
     aspect-ratio: 9/16;
     width: 15%;
     background-image: url("../img/sf/ryu/punch2.png");
   }
-}
+  100% {
+    background-image: url("../img/sf/ryu/punch1.png");
+  }
+} */
 
 .ken {
   aspect-ratio: 9/16;
-  width: 10%;
+  width: 15%;
   height: auto;
-  background-color: red;
+  /* background-color: red; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  transform: scaleX(-100%);
 
   position: absolute;
   bottom: 10%;
   right: 15%;
+}
+.ken-idle {
+  animation: ken-idle infinite 0.35s normal;
+}
+.ken-move {
+  animation: ken-move infinite 0.5s normal;
+}
+.ken-crouch {
+  background-image: url("../img/sf/ken/crouch.png");
+}
+
+@keyframes ken-idle {
+  0% {
+    background-image: url("../img/sf/ken/idle1.png");
+  }
+  100% {
+    background-image: url("../img/sf/ken/idle2.png");
+  }
+}
+
+@keyframes ken-move {
+  0% {
+    background-image: url("../img/sf/ken/move1.png");
+  }
+  25% {
+    background-image: url("../img/sf/ken/move2.png");
+  }
+  50% {
+    background-image: url("../img/sf/ken/move3.png");
+  }
+  75% {
+    background-image: url("../img/sf/ken/move2.png");
+  }
+  100% {
+    background-image: url("../img/sf/ken/move1.png");
+  }
 }

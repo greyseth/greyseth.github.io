@@ -66,50 +66,67 @@ let playerSpeed = 0.5;
 let dirInput = {
   left: false,
   right: false,
+  down: false,
 };
 
-const atkRate = 1;
-let isAttacking = false;
-let nextAtkTime = 0;
-let atkInput = {
-  punch: { input: false, time: 1000 },
-  kick: { input: false, time: 1000 },
+let enemPos = 15;
+let enemInput = {
+  left: false,
+  right: false,
+  down: false,
 };
+
+// const atkRate = 1;
+// let isAttacking = false;
+// let nextAtkTime = 0;
+// let atkInput = {
+//   punch: { input: false, time: 1000 },
+//   kick: { input: false, time: 1000 },
+// };
 
 const ryu = document.querySelector(".ryu");
+const ken = document.querySelector(".ken");
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "a") dirInput.left = true;
   else if (e.key === "d") dirInput.right = true;
+  else if (e.key === "s") dirInput.down = true;
 
-  if (e.key === "j") {
-    isAttacking = true;
+  if (e.key === "j") enemInput.left = true;
+  else if (e.key === "l") enemInput.right = true;
+  else if (e.key === "k") enemInput.down = true;
 
-    ryu.classList.remove("ryu-idle");
-    ryu.classList.add("ryu-punch");
+  // if (e.key === "j") {
+  //   isAttacking = true;
 
-    // nextAtkTime = timePassed + 1 / atkRate;
+  //   ryu.classList.remove("ryu-idle");
+  //   ryu.classList.add("ryu-punch");
 
-    setTimeout(() => {
-      ryu.classList.remove("ryu-punch");
-      ryu.classList.add("ryu-idle");
+  //   // nextAtkTime = timePassed + 1 / atkRate;
 
-      isAttacking = false;
-    }, atkInput.punch.time);
-  } else if (e.key == "k") atkInput.kick.input = true;
+  //   setTimeout(() => {
+  //     ryu.classList.remove("ryu-punch");
+  //     ryu.classList.add("ryu-idle");
+
+  //     isAttacking = false;
+  //   }, atkInput.punch.time);
+  // } else if (e.key == "k") atkInput.kick.input = true;
 });
 
 document.addEventListener("keyup", (e) => {
   if (e.key === "a") dirInput.left = false;
   else if (e.key === "d") dirInput.right = false;
+  else if (e.key === "s") dirInput.down = false;
+
+  if (e.key === "j") enemInput.left = false;
+  else if (e.key === "l") enemInput.right = false;
+  else if (e.key === "k") enemInput.down = false;
 
   // if (e.key === "j") atkInput.punch.input = false;
   // else if (e.key == "k") atkInput.kick.input = false;
 });
 
 setInterval(() => {
-  const ken = document.querySelector(".ken");
-
   // let isAttacking = false;
   // if (!isAttacking) {
   //   if (atkInput.punch.input) {
@@ -139,20 +156,56 @@ setInterval(() => {
   //   }
   // }
 
-  if (!isAttacking) {
-    if (dirInput.right) playerPos += playerSpeed;
-    if (dirInput.left) playerPos -= playerSpeed;
+  p1Update();
+  p2Update();
+}, 15);
 
-    if (dirInput.left || dirInput.right) {
-      ryu.classList.remove("ryu-idle");
-      ryu.classList.add("ryu-move");
-    } else {
-      ryu.classList.remove("ryu-move");
-      ryu.classList.add("ryu-idle");
-    }
+function p1Update() {
+  if (dirInput.down) {
+    ryu.classList.remove("ryu-move");
+    ryu.classList.remove("ryu-idle");
+    ryu.classList.add("ryu-crouch");
 
-    ryu.style.left = `${playerPos}%`;
+    return;
+  } else {
+    ryu.classList.remove("ryu-crouch");
   }
 
-  timePassed += 1;
-}, 15);
+  if (dirInput.right) playerPos += playerSpeed;
+  if (dirInput.left) playerPos -= playerSpeed;
+
+  if (dirInput.left || dirInput.right) {
+    ryu.classList.remove("ryu-idle");
+    ryu.classList.add("ryu-move");
+  } else {
+    ryu.classList.remove("ryu-move");
+    ryu.classList.add("ryu-idle");
+  }
+
+  ryu.style.left = `${playerPos}%`;
+}
+
+function p2Update() {
+  if (enemInput.down) {
+    ken.classList.remove("ken-move");
+    ken.classList.remove("ken-idle");
+    ken.classList.add("ken-crouch");
+
+    return;
+  } else {
+    ken.classList.remove("ken-crouch");
+  }
+
+  if (enemInput.right) enemPos -= playerSpeed;
+  if (enemInput.left) enemPos += playerSpeed;
+
+  if (enemInput.left || enemInput.right) {
+    ken.classList.remove("ken-idle");
+    ken.classList.add("ken-move");
+  } else {
+    ken.classList.remove("ken-move");
+    ken.classList.add("ken-idle");
+  }
+
+  ken.style.right = `${enemPos}%`;
+}

@@ -112,11 +112,13 @@ document.addEventListener("keydown", (e) => {
       if (secretInput[dir] < 2) incomplete = true;
     }
 
-    if (!incomplete && !isShown)
+    if (!incomplete && !isShown) {
+      console.log("showing");
       document
         .querySelector("main")
         .insertAdjacentHTML("afterbegin", notSecret);
 
-    isShown = true;
+      isShown = true;
+    }
   }
 });
