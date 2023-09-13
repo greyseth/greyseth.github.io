@@ -1,4 +1,4 @@
-const imgPath = "../img/";
+const imgPath = "../img/sf";
 const preloadImages = [
   "ryu/idle1.png",
   "ryu/idle2.png",
