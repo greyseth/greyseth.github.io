@@ -123,6 +123,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-async function preloadImage(url) {
-  var img = (new Image().src = url);
+function preloadImage(url) {
+  var img = new Image();
+  img.src = url;
 }

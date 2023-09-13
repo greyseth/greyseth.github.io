@@ -1,4 +1,4 @@
-const imgPath = "../img/sf";
+const imgPath = "./img/sf";
 const preloadImages = [
   "ryu/idle1.png",
   "ryu/idle2.png",
@@ -12,8 +12,9 @@ const preloadImages = [
   "ken/move2.png",
   "ken/move3.png",
 ];
-preloadImages.forEach(async (img) => await preloadImage(`${imgPath}/${img}`));
-console.log("images loaded");
+window.onload = () => {
+  preloadImages.forEach((img) => preloadImage(`${imgPath}/${img}`));
+};
 
 const toPush = [
   { name: "gamesDesc", pos: 700, change: "games-extra-in" },
