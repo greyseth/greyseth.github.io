@@ -252,6 +252,12 @@
 .ryu.crouch {
   background-image: url("../img/sf/ryu/crouch.png");
 }
+.ryu.hado {
+  animation: ryu-hado infinite 0.8s normal;
+}
+.ryu.shoryu {
+  animation: ryu-shoryu infinite 1s normal;
+}
 
 @keyframes ryu-idle {
   0% {
@@ -277,6 +283,45 @@
   }
   100% {
     background-image: url("../img/sf/ryu/move1.png");
+  }
+}
+
+@keyframes ryu-hado {
+  0% {
+    background-image: url("../img/sf/ryu/hado1.png");
+  }
+  25% {
+    background-image: url("../img/sf/ryu/hado2.png");
+  }
+  50% {
+    background-image: url("../img/sf/ryu/hado3.png");
+  }
+  75% {
+    background-image: url("../img/sf/ryu/hado2.png");
+  }
+  100% {
+    background-image: url("../img/sf/ryu/hado1.png");
+  }
+}
+
+@keyframes ryu-shoryu {
+  0% {
+    background-image: url("../img/sf/ryu/shoryu1.png");
+  }
+  15% {
+    background-image: url("../img/sf/ryu/shoryu2.png");
+  }
+  25% {
+    background-image: url("../img/sf/ryu/shoryu3.png");
+  }
+  50% {
+    background-image: url("../img/sf/ryu/shoryu4.png");
+  }
+  75% {
+    background-image: url("../img/sf/ryu/shoryu5.png");
+  }
+  100% {
+    background-image: url("../img/sf/ryu/shoryu6.png");
   }
 }
 
@@ -315,7 +360,7 @@
 
   position: absolute;
   bottom: 10%;
-  right: 15%;
+  left: 65%;
 }
 .ken.idle {
   animation: ken-idle infinite 0.35s normal;

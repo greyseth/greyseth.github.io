@@ -1,19 +1,37 @@
-const imgPath = "./img/sf";
-const preloadImages = [
+const sfPath = "./img/sf";
+const sfSprites = [
   "ryu/idle1.png",
   "ryu/idle2.png",
   "ryu/move1.png",
   "ryu/move2.png",
   "ryu/move3.png",
   "ryu/move4.png",
+  "ryu/hado1.png",
+  "ryu/hado2.png",
+  "ryu/hado3.png",
+  "ryu/crouch.png",
   "ken/idle1.png",
   "ken/idle2.png",
   "ken/move1.png",
   "ken/move2.png",
   "ken/move3.png",
+  "ken/crouch.png",
 ];
+const gamesPath = "./img/gaming";
+const gameBGs = [
+  "chronoBG.jpg",
+  "d2BG.jpg",
+  "hlBG.jpg",
+  "mk3BG.jpg",
+  "OOTBG.webp",
+  "p3BG.jpg",
+  "re4BG.jpg",
+  "sc4.jpg",
+];
+
 window.onload = () => {
-  preloadImages.forEach((img) => preloadImage(`${imgPath}/${img}`));
+  sfSprites.forEach((img) => preloadImage(`${sfPath}/${img}`));
+  gameBGs.forEach((img) => preloadImage(`${gamesPath}/${img}`));
 };
 
 const toPush = [
@@ -75,154 +93,4 @@ function enableBG(logo, bg, target = "games") {
 
 function reverse(target) {
   document.getElementById(target).classList.toggle("reversed");
-}
-
-let playerPos = 15;
-let playerSpeed = 0.5;
-const animStates = {};
-let dirInput = {
-  left: false,
-  right: false,
-  down: false,
-};
-
-let enemPos = 15;
-let enemInput = {
-  left: false,
-  right: false,
-  down: false,
-};
-
-// const atkRate = 1;
-// let isAttacking = false;
-// let nextAtkTime = 0;
-// let atkInput = {
-//   punch: { input: false, time: 1000 },
-//   kick: { input: false, time: 1000 },
-// };
-
-const ryu = document.querySelector(".ryu");
-const ken = document.querySelector(".ken");
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "a") dirInput.left = true;
-  else if (e.key === "d") dirInput.right = true;
-  else if (e.key === "s") dirInput.down = true;
-
-  if (e.key === "j") enemInput.left = true;
-  else if (e.key === "l") enemInput.right = true;
-  else if (e.key === "k") enemInput.down = true;
-
-  // if (e.key === "j") {
-  //   isAttacking = true;
-
-  //   ryu.classList.remove("ryu-idle");
-  //   ryu.classList.add("ryu-punch");
-
-  //   // nextAtkTime = timePassed + 1 / atkRate;
-
-  //   setTimeout(() => {
-  //     ryu.classList.remove("ryu-punch");
-  //     ryu.classList.add("ryu-idle");
-
-  //     isAttacking = false;
-  //   }, atkInput.punch.time);
-  // } else if (e.key == "k") atkInput.kick.input = true;
-});
-
-document.addEventListener("keyup", (e) => {
-  if (e.key === "a") dirInput.left = false;
-  else if (e.key === "d") dirInput.right = false;
-  else if (e.key === "s") dirInput.down = false;
-
-  if (e.key === "j") enemInput.left = false;
-  else if (e.key === "l") enemInput.right = false;
-  else if (e.key === "k") enemInput.down = false;
-
-  // if (e.key === "j") atkInput.punch.input = false;
-  // else if (e.key == "k") atkInput.kick.input = false;
-});
-
-setInterval(() => {
-  // let isAttacking = false;
-  // if (!isAttacking) {
-  //   if (atkInput.punch.input) {
-  //     isAttacking = true;
-
-  //     ryu.classList.remove("ryu-idle");
-  //     ryu.classList.add("ryu-punch");
-
-  //     nextAtkTime = timePassed + 1 / atkRate;
-
-  //     setTimeout(() => {
-  //       ryu.classList.remove("ryu-punch");
-  //       ryu.classList.add("ryu-idle");
-
-  //       isAttacking = false;
-  //     }, atkInput.punch.time);
-  //   } else if (atkInput.kick.input) {
-  //     ryu.classList.remove("ryu-idle");
-  //     //add kick class
-
-  //     nextAtkTime = timePassed + 1 / atkRate;
-
-  //     setTimeout(() => {
-  //       //remove kick class
-  //       ryu.classList.add("ryu-idle");
-  //     }, atkInput.kick.time);
-  //   }
-  // }
-
-  p1Update();
-  p2Update();
-}, 15);
-
-function p1Update() {
-  if (dirInput.down) {
-    ryu.classList.remove("move");
-    ryu.classList.remove("idle");
-    ryu.classList.add("crouch");
-
-    return;
-  } else {
-    ryu.classList.remove("crouch");
-  }
-
-  if (dirInput.right) playerPos += playerSpeed;
-  if (dirInput.left) playerPos -= playerSpeed;
-
-  if (dirInput.left || dirInput.right) {
-    ryu.classList.remove("idle");
-    ryu.classList.add("move");
-  } else {
-    ryu.classList.remove("move");
-    ryu.classList.add("idle");
-  }
-
-  ryu.style.left = `${playerPos}%`;
-}
-
-function p2Update() {
-  if (enemInput.down) {
-    ken.classList.remove("move");
-    ken.classList.remove("idle");
-    ken.classList.add("crouch");
-
-    return;
-  } else {
-    ken.classList.remove("crouch");
-  }
-
-  if (enemInput.right) enemPos -= playerSpeed;
-  if (enemInput.left) enemPos += playerSpeed;
-
-  if (enemInput.left || enemInput.right) {
-    ken.classList.remove("idle");
-    ken.classList.add("move");
-  } else {
-    ken.classList.remove("move");
-    ken.classList.add("idle");
-  }
-
-  ken.style.right = `${enemPos}%`;
 }
