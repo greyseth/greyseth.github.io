@@ -228,11 +228,13 @@
 }
 
 .ryu {
-  aspect-ratio: 9/16;
-  width: 15%;
+  aspect-ratio: 13/16;
+  width: 20%;
   height: auto;
   /* background-color: blue; */
+  /* background-size: 100% 100%; */
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   image-rendering: pixelated;
 
@@ -290,11 +292,20 @@
   0% {
     background-image: url("../img/sf/ryu/hado1.png");
   }
-  25% {
+  15% {
+    width: 21%;
+    background-position: bottom;
     background-image: url("../img/sf/ryu/hado2.png");
   }
-  50% {
+  25% {
+    width: 21%;
+    background-position-y: bottom;
     background-image: url("../img/sf/ryu/hado3.png");
+  }
+  50% {
+    width: 21%;
+    background-position-y: bottom;
+    background-image: url("../img/sf/ryu/hado4.png");
   }
   75% {
     background-image: url("../img/sf/ryu/hado2.png");
@@ -312,12 +323,17 @@
     background-image: url("../img/sf/ryu/shoryu2.png");
   }
   25% {
+    /* aspect-ratio: 12/16; */
+    /* background-size: 100% 100%; */
+    width: 25%;
     background-image: url("../img/sf/ryu/shoryu3.png");
   }
   50% {
+    width: 25%;
     background-image: url("../img/sf/ryu/shoryu4.png");
   }
   75% {
+    width: 25%;
     background-image: url("../img/sf/ryu/shoryu5.png");
   }
   100% {
@@ -349,18 +365,20 @@
 } */
 
 .ken {
-  aspect-ratio: 9/16;
-  width: 15%;
+  aspect-ratio: 13/16;
+  width: 20%;
   height: auto;
-  /* background-color: red; */
+  /* background-color: blue; */
+  /* background-size: 100% 100%; */
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   image-rendering: pixelated;
-  transform: scaleX(-100%);
 
   position: absolute;
   bottom: 10%;
   left: 65%;
+  transform: scaleX(-100%);
 }
 .ken.idle {
   animation: ken-idle infinite 0.35s normal;

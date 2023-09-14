@@ -30,6 +30,8 @@ const ken = document.querySelector(".ken");
 
 let p1IsAttacking = false;
 let p1AttackCountdown = 0;
+let movingX = { moving: false, speed: 0.5 };
+let movingY = { moving: false, speed: 0.5 };
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "a") {
@@ -59,6 +61,8 @@ document.addEventListener("keydown", (e) => {
       updateState(ryu, "shoryu");
       p1IsAttacking = true;
       p1AttackCountdown = 650;
+      movingX.moving = true;
+      movingX.speed = 0.5;
 
       lastInputs.p1 = [];
     }
@@ -136,7 +140,16 @@ function p1Update() {
     ryu.style.left = `${playerPos}%`;
   } else {
     p1AttackCountdown -= 15;
-    if (p1AttackCountdown <= 0) p1IsAttacking = false;
+    if (p1AttackCountdown <= 0) {
+      p1IsAttacking = false;
+      movingX.moving = false;
+      movingY.moving = false;
+    }
+  }
+
+  if (movingX.moving) {
+    playerPos += movingX.speed;
+    ryu.style.left = `${playerPos}%`;
   }
 }
 
