@@ -1,3 +1,5 @@
+let smallScreenWidth = 600;
+
 let firstScroll = true;
 let showHeader = false;
 let update = false;

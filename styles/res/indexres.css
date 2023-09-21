@@ -1,0 +1,50 @@
+@media (max-width: 600px) {
+  .hello-there h1 {
+    font-size: 12vw;
+  }
+
+  .site-desc {
+    font-size: 4vw;
+  }
+
+  /* Removes animations for the time being */
+  .bio {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  #likes,
+  #dislikes {
+    transform: translateX(0px);
+  }
+
+  .decor,
+  .decor * {
+    display: none;
+  }
+
+  .more {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  .more-buttons div {
+    height: 250px;
+  }
+
+  .more-buttons div img {
+    height: 150px;
+    opacity: 1;
+  }
+
+  .more-buttons div p {
+    font-size: 5vw;
+  }
+
+  .message {
+    margin: 0px;
+    width: 100%;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

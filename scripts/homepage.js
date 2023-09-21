@@ -15,7 +15,7 @@ let isZooming = false;
 let zoomedIn;
 
 function showText(e) {
-  if (isZooming) return;
+  if (isZooming || screen.width < smallScreenWidth) return;
 
   isZooming = true;
   zoomedIn = e;
@@ -79,12 +79,6 @@ lists.forEach((li) => {
 function sendMsg() {
   const messageContent = document.getElementById("msg-content").value;
   if (messageContent !== "") {
-    // const hook = new WebhookClient({
-    //   url: "https://discord.com/api/webhooks/1151159364808347848/91lf4f47BSAgqAFvGwuCHrRk4KepfaK4HpEicbghCPo61Nza0S2zMyMMu2fFfll_PYSf",
-    // });
-    // hook.send({
-    //   content: `Someone actually saw your site and sent a message:\n${messageContent}`,
-    // });
     var xhr = new XMLHttpRequest();
     xhr.onerror = (e) => {
       msgError("An error has occurred");
