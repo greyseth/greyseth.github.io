@@ -66,7 +66,7 @@
         </div>
       </section>
 
-      <section class="show-container" style="margin-bottom: 50px">
+      <section class="show-container">
         <div class="games-title">
           Some of the best games of all time (in my opinion)
         </div>
@@ -108,10 +108,10 @@
           />
         </div>
         <div class="games-extra" id="gamesDesc" onclick="reverse('gamesDesc')">
-          <div style="transform: translateX(-300px); opacity: 0">
+          <div style="--move-pos: -300px">
             <img src="./img/gaming/snes.png" />
           </div>
-          <div style="transform: translateX(900px); opacity: 0">
+          <div style="--move-pos: 900px">
             My favourite console generation has got to be the fourth. Why? I
             don't know, tbh. Everything just has so much charm in this era.
             Like, every new invention feels so magical to experience.
@@ -122,12 +122,12 @@
           id="gamesDesc2"
           onclick="reverse('gamesDesc2')"
         >
-          <div style="transform: translateX(-900px); opacity: 0">
+          <div style="--move-pos: -900px">
             My favourite genre is the first person shooter. Fast-paced,
             punishing, and chaotic old ones, not the very slow new ones. I also
             play lots of fighting games.
           </div>
-          <div style="transform: translateX(300px); opacity: 0">
+          <div style="--move-pos: 300px">
             <img src="./img/gaming/halfgrey.png" />
           </div>
         </div>
@@ -137,9 +137,12 @@
           <div class="ryu idle"></div>
           <div class="ken idle"></div>
         </div>
+        <div class="sf-info">
+          <p>Use WASD, C, and P to pause</p>
+        </div>
       </section>
 
-      <section style="margin-bottom: 50px">
+      <section class="show-container">
         <div class="games-title">Movies and series I'm obsessed with</div>
         <div class="games" id="movies">
           <img
@@ -183,18 +186,19 @@
           id="moviesDesc"
           onclick="reverse('moviesDesc')"
         >
-          <div style="transform: translateX(-300px); opacity: 0">
+          <div style="--move-pos: -300px">
             <img src="./img/movies/trevor.png" />
           </div>
-          <div style="transform: translateX(900px); opacity: 0">
+          <div style="--move-pos: 900px">
             I've ever only watched two animes in my entire life, and they're the
-            Castlevania Animated Series and Persona animated series adaptations.
-            Surprisingly good video game adaptations.
+            Castlevania Animated Series and Persona animated series adaptations
+            (if you can call those animes). Surprisingly good video game
+            adaptations.
           </div>
         </div>
       </section>
 
-      <section>
+      <section class="show-container">
         <div class="games-title">Bands I listen to all the time</div>
         <div class="games" id="music">
           <img

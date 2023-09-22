@@ -79,6 +79,7 @@
 
 .show-container {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .games-title {
@@ -154,6 +155,8 @@
 .games-extra div {
   height: 300px;
   border: #bc6ff1 1px solid;
+  transform: translateX(var(--move-pos));
+  opacity: 0;
 }
 
 .games-extra div:last-child {
@@ -225,6 +228,12 @@
   margin: 0px auto;
   position: relative;
   overflow: hidden;
+}
+
+.sf-info {
+  text-align: center;
+  color: white;
+  font-size: 0.85rem;
 }
 
 .ryu {
