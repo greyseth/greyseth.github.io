@@ -1,6 +1,7 @@
 .navigator {
   display: grid;
-  grid-template-columns: 1fr 30%;
+  width: 100%;
+  grid-template-columns: 1fr 30vw;
   background-image: url("../img/DottedBackground.jpg");
   background-size: 300px;
   height: 200px;
@@ -47,6 +48,7 @@
   grid-template-columns: 400px 1fr;
   height: 400px;
   margin-bottom: 50px;
+  border: #bc6ff1 2px solid;
 }
 
 .lang ul {
@@ -68,19 +70,19 @@
 .lang div {
   color: white;
   font-size: 18px;
-  margin: 120px;
+  /* margin: 120px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  border: #bc6ff1 solid 2px;
-}
-
-.lang div:last-child {
   padding: 15px;
 }
 
+.show-container {
+  width: 100%;
+}
+
 .games-title {
-  width: 950px;
+  width: 70%;
   height: 50px;
   background-color: #bc6ff1;
   margin: 0px auto;
@@ -95,7 +97,7 @@
 .games {
   /* background-color: blue; */
   aspect-ratio: 16 / 9;
-  width: 950px;
+  width: 70%;
   margin: 0px auto;
   display: flex;
   justify-content: space-evenly;
@@ -104,6 +106,7 @@
   padding: 15px;
   background-image: url("../img/DottedBackground.jpg");
   background-size: cover;
+  background-position: center;
   overflow: hidden;
   margin-bottom: 50px;
 
@@ -143,6 +146,7 @@
 
 .games-extra {
   display: grid;
+  width: 100%;
   grid-template-columns: 300px 1fr;
   transition: 1s;
 }
@@ -150,10 +154,6 @@
 .games-extra div {
   height: 300px;
   border: #bc6ff1 1px solid;
-}
-
-.games-extra div:first-child {
-  width: 300px;
 }
 
 .games-extra div:last-child {

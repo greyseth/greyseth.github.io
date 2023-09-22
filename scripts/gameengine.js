@@ -33,6 +33,8 @@ let p1AttackCountdown = 0;
 let movingX = { moving: false, speed: 0.5 };
 let movingY = { moving: false, speed: 0.5 };
 
+let update = false;
+
 document.addEventListener("keydown", (e) => {
   if (e.key === "a") {
     dirInput.left = true;
@@ -178,6 +180,8 @@ function p2Update() {
 }
 
 setInterval(() => {
+  if (!update) return;
+
   p1Update();
   p2Update();
 }, 15);
