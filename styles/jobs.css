@@ -111,12 +111,13 @@
 }
 
 .lang-decor {
-  width: 100vw;
+  width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   gap: 50px;
   align-items: center;
+  position: relative;
 }
 
 /* Lines for the decor */
@@ -124,6 +125,7 @@
   width: 150px;
   height: 10px;
   background-color: white;
+  position: absolute;
 }
 /* Middle circle */
 .lang-decor div:nth-child(2) {
@@ -155,7 +157,7 @@
 @keyframes lines-move-right {
   0% {
     width: 150px;
-    transform: translateX(0px);
+    transform: translateX(150px);
   }
 
   100% {
@@ -166,7 +168,7 @@
 @keyframes lines-move-left {
   0% {
     width: 150px;
-    transform: translateX(0px);
+    transform: translateX(-150px);
   }
 
   100% {
@@ -176,19 +178,25 @@
 }
 
 .link-desc {
-  width: 500px;
-  height: 150px;
-  margin: 0px auto;
-  border: #bc6ff1 2px solid;
+  width: 100%;
   color: white;
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 15px;
+  text-align: center; */
+  /* padding: 15px; */
   /* opacity: 0;
   transform: scaleX(0%); */
   margin-bottom: 50px;
+}
+
+.link-desc p {
+  width: 35%;
+  height: 150px;
+  padding-top: 50px;
+  text-align: center;
+  margin: 0px auto;
+  border: #bc6ff1 2px solid;
 }
 .link-desc b {
   color: red;
@@ -214,11 +222,17 @@
   }
 }
 
+.offer-container {
+  width: 100%;
+  margin-bottom: 150px;
+}
+
 .offer {
-  width: 700px;
-  height: 250px;
+  aspect-ratio: 16/9;
+  width: 65%;
+  height: auto;
   margin: 0px auto;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   border: #bc6ff1 2px solid;
   color: white;
   font-size: 25px;
@@ -247,7 +261,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100;
   height: 250px;
   margin-bottom: 50px;
 }
@@ -260,6 +274,7 @@
 .offer-img p {
   color: yellow;
   font-size: 15px;
+  text-align: center;
 }
 
 .blender-block {
