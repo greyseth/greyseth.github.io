@@ -223,11 +223,15 @@
   width: 60%;
   height: auto;
   background-image: url("../img/sf/sfbg.jpg");
+  image-rendering: pixelated;
   background-size: contain;
   border: 3px solid #bc6ff1;
   margin: 0px auto;
   position: relative;
   overflow: hidden;
+}
+.mk {
+  background-image: url("../img/mk/mkBG.jpg");
 }
 
 .sf-pause {
@@ -243,6 +247,7 @@
   font-size: 0.85rem;
 }
 
+/* #region SF characters */
 .ryu {
   aspect-ratio: 13/16;
   width: 20%;
@@ -432,3 +437,57 @@
     background-image: url("../img/sf/ken/move1.png");
   }
 }
+
+/* #endregion */
+
+/* #region MK scorpion */
+
+.scorps {
+  aspect-ratio: 9/16;
+  width: 25%;
+  height: auto;
+  background-image: url("../img/mk/char/hanzo_idle1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  position: absolute;
+  top: -13%;
+  left: 18%;
+}
+
+.target {
+  aspect-ratio: 13/6;
+  width: 30%;
+  height: auto;
+  background-image: url("../img/mk/target/anvil.png");
+  background-size: contain;
+  image-rendering: pixelated;
+  position: absolute;
+  left: 12%;
+  bottom: 30%;
+}
+
+/* Animations */
+.s-idle {
+  animation: scorps-idle 1s infinite normal forwards;
+}
+
+@keyframes scorps-idle {
+  0% {
+    background-image: url("../img/mk/char/hanzo_idle1.png");
+  }
+  /* 25% {
+    background-image: url("../img/mk/char/hanzo_idle2.png");
+  } */
+  50% {
+    background-image: url("../img/mk/char/hanzo_idle2.png");
+  }
+  /* 75% {
+    background-image: url("../img/mk/char/hanzo_idle4.png");
+  } */
+  100% {
+    background-image: url("../img/mk/char/hanzo_idle1.png");
+  }
+}
+
+/* #endregion */

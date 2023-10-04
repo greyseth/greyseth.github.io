@@ -33,7 +33,7 @@ let p1AttackCountdown = 0;
 let movingX = { moving: false, speed: 0.5 };
 let movingY = { moving: false, speed: 0.5 };
 
-let paused = false;
+let paused = true;
 
 //Input handling
 document.addEventListener("keydown", (e) => {
