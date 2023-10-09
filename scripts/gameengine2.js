@@ -5,7 +5,7 @@ let hasHit = false;
 let meter = 0;
 
 const meterSpeed = 11;
-const meterAdd = 20;
+const meterAdd = 15;
 const meterMax = 100;
 
 //in miliseconds
@@ -49,7 +49,7 @@ function hit() {
 function mkUpdate() {
   if (hasHit) return;
 
-  if (started && (meter >= meterMax || meter <= -20)) {
+  if (started && (meter >= meterMax || meter <= -15)) {
     hit();
     return;
   }
