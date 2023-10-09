@@ -451,7 +451,7 @@
   background-repeat: no-repeat;
   image-rendering: pixelated;
   position: absolute;
-  top: -13%;
+  top: -20%;
   left: 18%;
 }
 
@@ -467,26 +467,94 @@
   bottom: 30%;
 }
 
+.meter {
+  aspect-ratio: 35/172;
+  width: 5%;
+  height: auto;
+  background-image: url("../img/mk/UI/meteroutline.png");
+  background-size: contain;
+  image-rendering: pixelated;
+  position: absolute;
+  left: 2%;
+  top: 10%;
+  z-index: 50;
+}
+
+.fill {
+  aspect-ratio: 35/172;
+  width: 5%;
+  height: auto;
+  position: absolute;
+  left: 2%;
+  top: 10%;
+  z-index: 45;
+}
+
+.fill div {
+  background-color: yellow;
+  width: 100%;
+  height: 50%;
+  transform: scaleY(-100%);
+}
+
+.ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.ui h2 {
+  font-family: "kombat";
+  width: 100%;
+  text-align: center;
+  color: yellow;
+  font-size: 2rem;
+  text-shadow: 3px 3px black;
+}
+
 /* Animations */
+.target-broken {
+  background-image: url("../img/mk/target/anvilbroke.png");
+}
+
 .s-idle {
   animation: scorps-idle 1s infinite normal forwards;
+}
+
+.s-hit {
+  animation: scorps-hit 1s 1 normal forwards;
 }
 
 @keyframes scorps-idle {
   0% {
     background-image: url("../img/mk/char/hanzo_idle1.png");
   }
-  /* 25% {
-    background-image: url("../img/mk/char/hanzo_idle2.png");
-  } */
-  50% {
+  25% {
     background-image: url("../img/mk/char/hanzo_idle2.png");
   }
-  /* 75% {
+  50% {
+    background-image: url("../img/mk/char/hanzo_idle3.png");
+  }
+  75% {
     background-image: url("../img/mk/char/hanzo_idle4.png");
-  } */
+  }
   100% {
     background-image: url("../img/mk/char/hanzo_idle1.png");
+  }
+}
+
+@keyframes scorps-hit {
+  0% {
+    background-image: url("../img/mk/char/hanzo_atk1.png");
+  }
+  25% {
+    background-image: url("../img/mk/char/hanzo_atk2.png");
+  }
+  50% {
+    background-image: url("../img/mk/char/hanzo_atk3.png");
+  }
+  100% {
+    background-image: url("../img/mk/char/hanzo_atk3.png");
   }
 }
 
