@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Greyseth's profile page." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/jobs.css" />
+    <link rel="stylesheet" href="./styles/responsive/jobsres.css" />
+    <title>Grey's Jobs</title>
+  </head>
+  <body>
+    <header>
+      <img src="./img/GreyLogo.png" />
+      <h2>About Me Page</h2>
+      <a onclick="document.querySelector('.navigator').scrollIntoView()"
+        >Scroll to top</a
+      >
+    </header>
+
+    <main>
+      <section class="navigator" id="site-top">
+        <div>
+          <h1>WHAT I DO</h1>
+        </div>
+        <div class="nav-grid">
+          <button>PROGRAMMING</button>
+          <button
+            onclick="document.getElementById('itch-link').scrollIntoView()"
+          >
+            GAMEDEV
+          </button>
+          <button
+            onclick="document.getElementById('blender-sec').scrollIntoView()"
+          >
+            3D MODELLING
+          </button>
+          <button onclick="window.location = './index.html'">RETURN</button>
+        </div>
+      </section>
+
+      <section class="lang" id="lang-section">
+        <ul>
+          <li><img src="./img/lang/csharp.png" /></li>
+          <li><img src="./img/lang/js.png" /></li>
+          <li><img src="./img/lang/html.png" /></li>
+          <li><img src="./img/lang/cplus.png" /></li>
+        </ul>
+        <div>
+          <p>
+            I've been learning about programming for about more or less 5 years
+            now (by 2023), and have used multiple different languages since
+            then.
+          </p>
+        </div>
+      </section>
+      <section class="lang-desc">
+        <div>
+          <img src="./img/dev/one.png" />
+          <img src="./img/dev/two.png" />
+          <img src="./img/dev/three.png" />
+        </div>
+        <div>
+          <p>
+            I am mainly a game developer, but I've also been learning web and
+            app development.
+          </p>
+        </div>
+        <div>
+          <img src="./img/dev/four.jpg" />
+          <img src="./img/dev/five.jpg" />
+          <img src="./img/dev/six.jpg" />
+        </div>
+      </section>
+      <section class="lang-decor">
+        <div></div>
+        <div>
+          <img
+            src="./img/dev/itch.png"
+            onclick="window.location = 'https://greyseth.itch.io'"
+          />
+        </div>
+        <div></div>
+      </section>
+      <section class="link-desc" id="itch-link">
+        <p>
+          The above image is a link that leads to my Itch.io page. Be warned,
+          however, that you <b>DON'T</b> want to see it...
+        </p>
+      </section>
+
+      <section class="offer-container">
+        <div class="offer offer-out" id="offer">
+          <p>
+            So far, I've done one freelance job. I made a short prototype which
+            my client requested to keep classified. So... If, by any chance, you
+            need someone to make a game for you...<br />
+            BETTER CALL GREY
+          </p>
+        </div>
+        <div class="offer-img">
+          <img src="./img/BetterCallGrey.png" />
+          <p>
+            Or not, because I'm not sure I have the qualifications... But hey,
+            I'm willing to accept low prices! (I really need money...)
+          </p>
+        </div>
+      </section>
+
+      <section id="blender-sec">
+        <div class="offer">
+          <p>
+            Now, if you've taken a look at those games, you're probably thinking
+            "wow, these look terrible." I am a programmer, and I don't really
+            have much talents when it comes to anything visual. I think that
+            that's the problem with all my games. They play fine, but they don't
+            LOOK good, which makes them super unappealing. If I were to make a
+            game that plays AND looks great, I'd need some help from an artist.
+            But nonetheless, I still try my best and do what I know about 3D
+            models.
+          </p>
+        </div>
+        <div class="blender-block">
+          <img src="./img/model/one.PNG" id="blender" />
+          <img src="./img/model/two.PNG" id="blender-2" />
+          <img src="./img/model/three.PNG" id="blender-3" />
+          <img src="./img/model/five.png" id="blender-4" />
+          <img src="./img/model/six.png" id="blender-5" />
+          <img src="./img/model/seven.png" id="blender-6" />
+        </div>
+      </section>
+
+      <section class="latest-proj" id="latest-proj">
+        <div class="proj-header">
+          <div class="proj-header-decor"></div>
+          <h2>LATEST PROJECT</h2>
+          <div class="proj-header-decor"></div>
+        </div>
+        <div class="proj-body">
+          <img class="selected-image" />
+          <div class="proj-gallery" id="proj-gallery">
+            <!-- Images will be added here -->
+          </div>
+        </div>
+
+        <a href="https://greyseth.itch.io/razorforce" target="_blank"
+          >CHECK IT OUT</a
+        >
+      </section>
+    </main>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/jobs.js"></script>
+  </body>
+</html>

@@ -1,0 +1,561 @@
+.navigator {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 30vw;
+  background-image: url("../img/DottedBackground.jpg");
+  background-size: 300px;
+  height: 200px;
+}
+
+.navigator div:not(.nav-grid) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px #bc6ff1;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.navigator h1 {
+  color: #ff4d00;
+  font-size: 80px;
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 2px black;
+}
+
+.navigator button {
+  background-color: #272121;
+  color: white;
+  border: 1px #bc6ff1 solid;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.navigator button:hover {
+  transform: scale(110%);
+  cursor: pointer;
+  color: #ff4d00;
+}
+
+.lang {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  height: 400px;
+  margin-bottom: 50px;
+  border: #bc6ff1 2px solid;
+}
+
+.lang ul {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-direction: column;
+  align-items: center;
+  gap: 150px;
+}
+
+.lang ul img {
+  width: 400px;
+  height: auto;
+}
+
+.lang div {
+  color: white;
+  font-size: 18px;
+  /* margin: 120px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.show-container {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.games-title {
+  width: 70%;
+  height: 50px;
+  background-color: #bc6ff1;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.games {
+  /* background-color: blue; */
+  aspect-ratio: 16 / 9;
+  width: 70%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  border: #bc6ff1 2px solid;
+  padding: 15px;
+  background-image: url("../img/DottedBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  margin-bottom: 50px;
+
+  filter: brightness(50%);
+  box-shadow: inset 0px 0px 20px black;
+  transition: 0.7s;
+}
+
+.games img {
+  width: 100px;
+  height: auto;
+  transform: translateY(-50px);
+  opacity: 0.5;
+  transition: 0.5s;
+  /* flex-grow: 0; */
+  position: static;
+}
+
+.games:hover {
+  filter: brightness(100%);
+  box-shadow: none;
+}
+.games:hover > img {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.games img:hover {
+  cursor: pointer;
+  transform: scale(120%);
+}
+
+.games .img-selected {
+  transform: scale(200%) translateY(100px) !important;
+  filter: drop-shadow(5px 5px 100px black);
+}
+
+.games-extra {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 300px 1fr;
+  transition: 1s;
+}
+
+.games-extra div {
+  height: 300px;
+  border: #bc6ff1 1px solid;
+  transform: translateX(var(--move-pos));
+  opacity: 0;
+}
+
+.games-extra div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  background-color: #52057b;
+}
+
+.games-extra img {
+  width: 300px;
+  height: 300px;
+}
+
+.reversed {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+}
+
+.reversed div:last-child {
+  width: 300px;
+  background-color: transparent;
+}
+
+.reversed div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  width: 100%;
+  background-color: #52057b;
+}
+
+.games-extra-in {
+  animation: games-in 1s forwards ease-out 1;
+}
+
+@keyframes games-in {
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.games-extra * {
+  animation: inherit;
+}
+
+.sf-container {
+  width: 100%;
+  padding: 2%;
+  margin-bottom: 50px;
+}
+
+.sf {
+  aspect-ratio: 16/9;
+  width: 60%;
+  height: auto;
+  background-image: url("../img/sf/sfbg.jpg");
+  image-rendering: pixelated;
+  background-size: contain;
+  border: 3px solid #bc6ff1;
+  margin: 0px auto;
+  position: relative;
+  overflow: hidden;
+}
+.mk {
+  background-image: url("../img/mk/mkBG.jpg");
+}
+
+.sf-pause {
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  background-color: rgba(80, 80, 80, 0.5);
+}
+
+.sf-info {
+  text-align: center;
+  color: white;
+  font-size: 0.85rem;
+}
+
+/* #region SF characters */
+.ryu {
+  aspect-ratio: 13/16;
+  width: 20%;
+  height: auto;
+  /* background-color: blue; */
+  /* background-size: 100% 100%; */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+}
+.ryu.idle {
+  animation: ryu-idle infinite 0.35s normal;
+}
+.ryu.move {
+  animation: ryu-move infinite 0.5s normal;
+}
+/* .ryu-punch {
+  animation: ryu-punch 1 0.85s normal forwards;
+} */
+.ryu.crouch {
+  background-image: url("../img/sf/ryu/crouch.png");
+}
+.ryu.hado {
+  animation: ryu-hado infinite 0.8s normal;
+}
+.ryu.shoryu {
+  animation: ryu-shoryu infinite 1s normal;
+}
+
+@keyframes ryu-idle {
+  0% {
+    background-image: url("../img/sf/ryu/idle1.png");
+  }
+  100% {
+    background-image: url("../img/sf/ryu/idle2.png");
+  }
+}
+
+@keyframes ryu-move {
+  0% {
+    background-image: url("../img/sf/ryu/move1.png");
+  }
+  25% {
+    background-image: url("../img/sf/ryu/move2.png");
+  }
+  50% {
+    background-image: url("../img/sf/ryu/move3.png");
+  }
+  75% {
+    background-image: url("../img/sf/ryu/move4.png");
+  }
+  100% {
+    background-image: url("../img/sf/ryu/move1.png");
+  }
+}
+
+@keyframes ryu-hado {
+  0% {
+    background-image: url("../img/sf/ryu/hado1.png");
+  }
+  15% {
+    width: 21%;
+    background-position: bottom;
+    background-image: url("../img/sf/ryu/hado2.png");
+  }
+  25% {
+    width: 21%;
+    background-position-y: bottom;
+    background-image: url("../img/sf/ryu/hado3.png");
+  }
+  50% {
+    width: 21%;
+    background-position-y: bottom;
+    background-image: url("../img/sf/ryu/hado4.png");
+  }
+  75% {
+    background-image: url("../img/sf/ryu/hado2.png");
+  }
+  100% {
+    background-image: url("../img/sf/ryu/hado1.png");
+  }
+}
+
+@keyframes ryu-shoryu {
+  0% {
+    background-image: url("../img/sf/ryu/shoryu1.png");
+  }
+  15% {
+    background-image: url("../img/sf/ryu/shoryu2.png");
+  }
+  25% {
+    /* aspect-ratio: 12/16; */
+    /* background-size: 100% 100%; */
+    width: 25%;
+    background-image: url("../img/sf/ryu/shoryu3.png");
+  }
+  50% {
+    width: 25%;
+    background-image: url("../img/sf/ryu/shoryu4.png");
+  }
+  75% {
+    width: 25%;
+    background-image: url("../img/sf/ryu/shoryu5.png");
+  }
+  100% {
+    background-image: url("../img/sf/ryu/shoryu6.png");
+  }
+}
+
+/* @keyframes ryu-punch {
+  0% {
+    background-image: url("../img/sf/ryu/punch1.png");
+  }
+  15% {
+    background-image: url("../img/sf/ryu/punch2.png");
+  }
+  35% {
+    aspect-ratio: 12/16;
+    background-position: center;
+    width: 20%;
+    background-image: url("../img/sf/ryu/punch3.png");
+  }
+  85% {
+    aspect-ratio: 9/16;
+    width: 15%;
+    background-image: url("../img/sf/ryu/punch2.png");
+  }
+  100% {
+    background-image: url("../img/sf/ryu/punch1.png");
+  }
+} */
+
+.ken {
+  aspect-ratio: 13/16;
+  width: 20%;
+  height: auto;
+  /* background-color: blue; */
+  /* background-size: 100% 100%; */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+
+  position: absolute;
+  bottom: 10%;
+  left: 65%;
+  transform: scaleX(-100%);
+}
+.ken.idle {
+  animation: ken-idle infinite 0.35s normal;
+}
+.ken.move {
+  animation: ken-move infinite 0.5s normal;
+}
+.ken.crouch {
+  background-image: url("../img/sf/ken/crouch.png");
+}
+
+@keyframes ken-idle {
+  0% {
+    background-image: url("../img/sf/ken/idle1.png");
+  }
+  100% {
+    background-image: url("../img/sf/ken/idle2.png");
+  }
+}
+
+@keyframes ken-move {
+  0% {
+    background-image: url("../img/sf/ken/move1.png");
+  }
+  25% {
+    background-image: url("../img/sf/ken/move2.png");
+  }
+  50% {
+    background-image: url("../img/sf/ken/move3.png");
+  }
+  75% {
+    background-image: url("../img/sf/ken/move2.png");
+  }
+  100% {
+    background-image: url("../img/sf/ken/move1.png");
+  }
+}
+
+/* #endregion */
+
+/* #region MK scorpion */
+
+.scorps {
+  aspect-ratio: 9/16;
+  width: 25%;
+  height: auto;
+  background-image: url("../img/mk/char/hanzo_idle1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  position: absolute;
+  top: -20%;
+  left: 18%;
+}
+
+.target {
+  aspect-ratio: 13/6;
+  width: 30%;
+  height: auto;
+  background-image: url("../img/mk/target/anvil.png");
+  background-size: contain;
+  image-rendering: pixelated;
+  position: absolute;
+  left: 12%;
+  bottom: 30%;
+}
+
+.meter {
+  aspect-ratio: 35/172;
+  width: 5%;
+  height: auto;
+  background-image: url("../img/mk/UI/meteroutline.png");
+  background-size: contain;
+  image-rendering: pixelated;
+  position: absolute;
+  left: 2%;
+  top: 10%;
+  z-index: 50;
+}
+
+.fill {
+  aspect-ratio: 35/172;
+  width: 5%;
+  height: auto;
+  position: absolute;
+  left: 2%;
+  top: 10%;
+  z-index: 45;
+}
+
+.fill div {
+  background-color: yellow;
+  width: 100%;
+  height: 50%;
+  transform: scaleY(-100%);
+}
+
+.ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.ui h2 {
+  font-family: "kombat";
+  width: 100%;
+  text-align: center;
+  color: yellow;
+  font-size: 2rem;
+  text-shadow: 3px 3px black;
+}
+
+/* Animations */
+.target-broken {
+  background-image: url("../img/mk/target/anvilbroke.png");
+}
+
+.s-idle {
+  animation: scorps-idle 1s infinite normal forwards;
+}
+
+.s-hit {
+  animation: scorps-hit 1s 1 normal forwards;
+}
+
+@keyframes scorps-idle {
+  0% {
+    background-image: url("../img/mk/char/hanzo_idle1.png");
+  }
+  25% {
+    background-image: url("../img/mk/char/hanzo_idle2.png");
+  }
+  50% {
+    background-image: url("../img/mk/char/hanzo_idle3.png");
+  }
+  75% {
+    background-image: url("../img/mk/char/hanzo_idle4.png");
+  }
+  100% {
+    background-image: url("../img/mk/char/hanzo_idle1.png");
+  }
+}
+
+@keyframes scorps-hit {
+  0% {
+    background-image: url("../img/mk/char/hanzo_atk1.png");
+  }
+  25% {
+    background-image: url("../img/mk/char/hanzo_atk2.png");
+  }
+  50% {
+    background-image: url("../img/mk/char/hanzo_atk3.png");
+  }
+  100% {
+    background-image: url("../img/mk/char/hanzo_atk3.png");
+  }
+}
+
+/* #endregion */

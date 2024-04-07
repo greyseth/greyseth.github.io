@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Greyseth's profile page." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/interests.css" />
+    <link rel="stylesheet" href="./styles/responsive/interestres.css" />
+    <title>Grey's Interests</title>
+  </head>
+  <body>
+    <header>
+      <img src="./img/GreyLogo.png" />
+      <h2>About Me Page</h2>
+      <a onclick="document.querySelector('.navigator').scrollIntoView()"
+        >Scroll to top</a
+      >
+    </header>
+
+    <main>
+      <section class="navigator" id="site-top">
+        <div>
+          <h1>MY INTERESTS</h1>
+        </div>
+        <div class="nav-grid">
+          <button
+            onclick="document.getEleme
+          ('games').scrollintoView()"
+          >
+            GAMES
+          </button>
+          <button onclick="document.getElementById('movies').scrollIntoView()">
+            MOVIES
+          </button>
+          <button onclick="document.getElementById('music').scrollIntoView()">
+            MUSIC
+          </button>
+          <button onclick="window.location = './index.html'">RETURN</button>
+        </div>
+      </section>
+
+      <section class="lang" id="lang-section">
+        <ul>
+          <li><img src="./img/controllers/NESController.png" /></li>
+          <li><img src="./img/controllers/GenesisController.png" /></li>
+          <li><img src="./img/controllers/SNESController.png" /></li>
+          <li><img src="./img/controllers/PS1Controller.png" /></li>
+          <li><img src="./img/controllers/N64Controller.png" /></li>
+          <li><img src="./img/controllers/DreamcastController.png" /></li>
+        </ul>
+        <div>
+          <p>
+            I'm a big retro game fan. From the third generation to the fifth,
+            mostly. I never really liked second gen games, to be completely
+            honest. And I've never had a sixth or seventh gen console.
+          </p>
+        </div>
+      </section>
+
+      <section class="show-container">
+        <div class="games-title">
+          Some of the best games of all time (in my opinion)
+        </div>
+        <div class="games" id="games">
+          <img
+            src="./img/gaming/d2.png"
+            id="d2"
+            onclick="enableBG('d2', 'd2BG.jpg')"
+          />
+          <img
+            src="./img/gaming/re4.png"
+            id="re4"
+            onclick="enableBG('re4', 're4BG.jpg')"
+          />
+          <img
+            src="./img/gaming/OoT_English_Logo.webp"
+            id="oot"
+            onclick="enableBG('oot', 'OOTBG.webp')"
+          />
+          <img
+            src="./img/gaming/p3.png"
+            id="p3"
+            onclick="enableBG('p3', 'p3BG.jpg')"
+          />
+          <img
+            src="./img/gaming/yakuza.png"
+            id="yakuza"
+            onclick="enableBG('yakuza', 'yakuzaBG.jpg')"
+          />
+          <img
+            src="./img/gaming/hl.png"
+            id="hl"
+            onclick="enableBG('hl', 'hlBG.jpg')"
+          />
+          <img
+            src="./img/gaming/mk3.png"
+            id="mk"
+            onclick="enableBG('mk', 'mk3BG.jpg')"
+          />
+        </div>
+        <div class="games-extra" id="gamesDesc" onclick="reverse('gamesDesc')">
+          <div style="--move-pos: -300px">
+            <img src="./img/gaming/snes.png" />
+          </div>
+          <div style="--move-pos: 900px">
+            My favourite console generation has got to be the fourth. Why? I
+            don't know, tbh. Everything just has so much charm in this era.
+            Like, every new invention feels so magical to experience.
+          </div>
+        </div>
+        <div
+          class="games-extra reversed"
+          id="gamesDesc2"
+          onclick="reverse('gamesDesc2')"
+        >
+          <div style="--move-pos: -900px">
+            My favourite genre is the first person shooter. Fast-paced,
+            punishing, and chaotic old ones, not the very slow new ones. I also
+            play lots of fighting games.
+          </div>
+          <div style="--move-pos: 300px">
+            <img src="./img/gaming/halfgrey.png" />
+          </div>
+        </div>
+      </section>
+      <section class="sf-container">
+        <div class="sf">
+          <div class="sf-pause" hidden></div>
+          <div class="ryu idle"></div>
+          <div class="ken idle"></div>
+        </div>
+        <div class="sf-info">
+          <p>Use WASD, C, and P to pause</p>
+        </div>
+      </section>
+
+      <section class="sf-container">
+        <div class="sf mk">
+          <div class="sf-pause" hidden></div>
+          <div class="scorps s-idle"></div>
+          <div class="target"></div>
+          <div class="meter"></div>
+          <div class="fill">
+            <div id="fill"></div>
+          </div>
+          <div class="ui">
+            <h2>TEST YOUR MIGHT</h2>
+          </div>
+        </div>
+        <div class="sf-info">
+          <p>Use F to increase power</p>
+        </div>
+      </section>
+
+      <section class="show-container">
+        <div class="games-title">Movies and series I'm obsessed with</div>
+        <div class="games" id="movies">
+          <img
+            src="./img/movies/t2.webp"
+            id="t2"
+            onclick="enableBG('t2', 't2BG.jpg', 'movies')"
+          />
+          <img
+            src="./img/movies/btff.png"
+            id="btff"
+            onclick="enableBG('btff', 'btffBG.jpeg', 'movies')"
+          />
+          <img
+            src="./img/movies/waltuh.png"
+            id="bb"
+            onclick="enableBG('bb', 'waltuh.jpg', 'movies')"
+          />
+          <img
+            src="./img/movies/gb.png"
+            id="gb"
+            onclick="enableBG('gb', 'gbBG.png', 'movies')"
+          />
+          <img
+            src="./img/movies/bt.png"
+            id="bt"
+            onclick="enableBG('bt', 'btBG.webp', 'movies')"
+          />
+          <img
+            src="./img/movies/ram.png"
+            id="ram"
+            onclick="enableBG('ram', 'ramBG.jpg', 'movies')"
+          />
+          <img
+            src="./img/movies/star.png"
+            id="star"
+            onclick="enableBG('star', 'starBG.jpg', 'movies')"
+          />
+        </div>
+        <div
+          class="games-extra"
+          id="moviesDesc"
+          onclick="reverse('moviesDesc')"
+        >
+          <div style="--move-pos: -300px">
+            <img src="./img/movies/trevor.png" />
+          </div>
+          <div style="--move-pos: 900px">
+            I've ever only watched two animes in my entire life, and they're the
+            Castlevania Animated Series and Persona animated series adaptations
+            (if you can call those animes). Surprisingly good video game
+            adaptations.
+          </div>
+        </div>
+      </section>
+
+      <section class="show-container">
+        <div class="games-title">Bands I listen to all the time</div>
+        <div class="games" id="music">
+          <img
+            src="./img/music/metallica.png"
+            id="metallica"
+            onclick="enableBG('metallica', 'metallicaBG.jpg', 'music')"
+          />
+          <img
+            src="./img/music/megadeth.png"
+            id="megadeth"
+            onclick="enableBG('megadeth', 'megadethBG.jpg', 'music')"
+          />
+          <img
+            src="./img/music/seven.png"
+            id="a7x"
+            onclick="enableBG('a7x', 'seven.jpg', 'music')"
+          />
+          <img
+            src="./img/music/park.png"
+            id="linkinpark"
+            onclick="enableBG('linkinpark', 'parkBG.jpg', 'music')"
+          />
+          <img
+            src="./img/music/slip.png"
+            id="slipknot"
+            onclick="enableBG('slipknot', 'slipBG.jpg', 'music')"
+          />
+          <img
+            src="./img/music/korn.png"
+            id="korn"
+            onclick="enableBG('korn', 'kornBG.jpg', 'music')"
+          />
+          <img
+            src="./img/music/ffdp.png"
+            id="ffdp"
+            onclick="enableBG('ffdp', 'ffdpBG.jpg', 'music')"
+          />
+        </div>
+      </section>
+    </main>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/interests.js"></script>
+    <script src="./scripts/gameengine.js"></script>
+    <script src="./scripts/gameengine2.js"></script>
+  </body>
+</html>

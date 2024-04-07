@@ -1,0 +1,140 @@
+<!-- NOTASECRET -->
+<!-- up up down down left right left right -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Greyseth's profile page." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/homepage.css" />
+    <link rel="stylesheet" href="./styles/responsive/indexres.css" />
+    <title>Grey's About Me</title>
+  </head>
+  <body>
+    <header>
+      <img src="./img/GreyLogo.png" />
+      <h2>About Me Page</h2>
+      <a onclick="document.querySelector('.hello-there').scrollIntoView()"
+        >Scroll to top</a
+      >
+    </header>
+
+    <main>
+      <section class="hello-there" id="site-top">
+        <div>
+          <h1>HELLO THERE</h1>
+        </div>
+        <div>
+          <img src="./img/GreyHello.png" width="400px" height="400px" />
+        </div>
+      </section>
+
+      <section class="site-desc">
+        <p>
+          This is a little website which I created to practice my JS and CSS. I
+          don't usually make 'proper' about mes like this, but I guess there's a
+          first time for everything.
+        </p>
+        <p>
+          This is the second version of the site. I remade everything to look
+          more 'modern'.
+        </p>
+      </section>
+
+      <section class="bio" id="bio-main">
+        <div>
+          <img src="./img/GreyPoint.png" width="400px" height="400px" />
+        </div>
+        <div>
+          <div class="desc-card" id="bio" onclick="showText('bio')">
+            <p>
+              I am Greyseth. My real name is <b>[REDACTED]</b>. I am a 16 year
+              old game developer, programmer, and 3D artist and animator
+              (Although my 3D stuff aren't very good, I'm not gonna lie...). I
+              would consider myself to be a big nerd. You know, I don't like
+              going outside, and I spend most of my time behind a screen. I'm
+              100% an introvert, according to a personality website. I guess
+              that's true, since I really don't feel comfortable just walking up
+              to someone and talking to them or something.
+            </p>
+          </div>
+          <div class="desc-card" id="avatar" onclick="showText('avatar')">
+            That there is my avatar. I took a base model of a human, modified it
+            slightly, and there it is. I used it for my YouTube channel, but
+            nowadays I only use it for profile pictures and such.
+          </div>
+        </div>
+      </section>
+
+      <section class="likes-dislikes" id="likes-dislikes">
+        <ul id="likes">
+          <h2 style="color: green">I LIKE...</h2>
+          <li>Programming</li>
+          <li>Video games</li>
+          <li>Rubik's Cubes</li>
+          <li>Skating</li>
+          <li>Scaling HTML elements with CSS transitions</li>
+        </ul>
+        <div class="decor">
+          <div id="top-bar"></div>
+          <div></div>
+          <div id="bottom-bar"></div>
+        </div>
+        <ul
+          style="background-color: #ff0000; border-color: #ff4d00"
+          id="dislikes"
+        >
+          <h2 style="color: #ff4d00; border-color: #ff4d00">I HATE...</h2>
+          <li>Myself</li>
+          <li>Cockroaches</li>
+        </ul>
+      </section>
+
+      <section class="more" id="more">
+        <h2>MORE STUFF</h2>
+        <div class="more-decor">
+          <div style="transform: rotate(45deg)">
+            <div class="circle circle-move"></div>
+          </div>
+          <div style="transform: rotate(-45deg)">
+            <div class="circle circle-move"></div>
+          </div>
+        </div>
+        <div class="more-buttons">
+          <div onclick="window.location = './jobs.html'">
+            <p>WHAT I DO</p>
+            <img src="./img/icons/code.png" />
+          </div>
+          <div onclick="window.location = './interests.html'">
+            <p>MY INTERESTS</p>
+            <img src="./img/icons/controller.png" />
+          </div>
+        </div>
+      </section>
+
+      <section class="message-container">
+        <div class="message" id="message">
+          <h2>SEND ANONYMOUS MESSAGE</h2>
+          <textarea
+            id="msg-content"
+            placeholder="Want to critique me, insult me, and/or send me a death threat? You can do it here, and I won't know who sent it!"
+          ></textarea>
+          <button onclick="sendMsg()">Send</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/homepage.js"></script>
+  </body>
+</html>
